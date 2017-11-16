@@ -3,23 +3,21 @@ package main
 import (
 	"fmt"
 	"net/http"
-	//".."
+	"strings"
+	".."
 )
 
 func elizaInterface(w http.ResponseWriter, r *http.Request) {
 	
-	userInput := r.URL.Query().Get("user-input")
+	input := strings.ToLower(r.URL.Query().Get("input"))
 
-
-	// Random Hello
-	output := ElizaIntro()
+	output := eliza.ReplyTo(input)
 
 	fmt.Fprintf(w, output)
-	fmt.Println(output)
 }
 
 func main() {
-	dir := http.Dir("../static")
+	dir := http.Dir("../webpage")
 	fileServer := http.FileServer(dir)
 
 	http.Handle("/", fileServer)
