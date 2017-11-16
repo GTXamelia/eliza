@@ -11,8 +11,8 @@ func elizaInterface(w http.ResponseWriter, r *http.Request) {
 	userInput := r.URL.Query().Get("user-input")
 
 
-
-	output := userInput
+	// Random Hello
+	output := ElizaIntro()
 
 	fmt.Fprintf(w, output)
 	fmt.Println(output)
