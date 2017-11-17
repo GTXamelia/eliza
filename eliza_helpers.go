@@ -45,12 +45,14 @@ func ReplyTo(input string) string {
     return randChoice(conversationFail)
 }
 
+// Processes user input to become more readable by eliza
 func preprocess(input string) string {
     input = strings.TrimRight(input, "\n.!")
     input = strings.ToLower(input)
     return input
 }
 
+// Searches libary of words to reflect to turn around sentences to be about the user
 func reflect(fragment string) string {
     words := strings.Split(fragment, " ")
     for i, word := range words {
@@ -61,6 +63,7 @@ func reflect(fragment string) string {
     return strings.Join(words, " ")
 }
 
+// Randomizes runmber for lists in elizas scripts
 func randChoice(list []string) string {
     randIndex := rand.Intn(len(list))
     return list[randIndex]

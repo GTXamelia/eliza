@@ -1,6 +1,7 @@
 package eliza
 
 // High priority last, low priotiry first
+// Libary of phrases
 var phrases = map[string][]string{
 
     // Replys
@@ -70,18 +71,21 @@ var phrases = map[string][]string{
     },
 }
 
+// Failing to find an answer in the libary above this libary will be used
 var conversationFail = []string{
     "Can we talk about the 32 county republic",
     "Let's focus on whats important.... British occupaption forces in Northern Ireland",
     "Did you know 26 + 6 = 1, it's true!",
-    "Very interesting.",
+    "Tell me more.",
     "Do you have time to talk about Wolfe Tone?",
     "Follow me on twitter @GerryAdamsSF",
     "Have you voted Sinn Fein?",
     "Buy my books on Amazon not on Amazon.co.BritishTyranny though",
     "I make the spiciest memes around",
+    "I'm an open book, ask me anything!",
 }
 
+// libary to change direction of conversation so bot can reply and talk to you
 var Reflected = map[string]string{
     "am": "are",
     "was": "were",
@@ -100,6 +104,7 @@ var Reflected = map[string]string{
 }
 
 // Using this to 'Dumb down' responses for bot
+// N.B Not yet integrated
 var Synonymizer = map[string][]string{
     // Noraml
 	"want":       []string{"need", "require", "wish", "longing", "demand"},

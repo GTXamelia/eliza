@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"strings"
 	".."
 )
 
@@ -11,7 +10,7 @@ import (
 func elizaInterface(w http.ResponseWriter, r *http.Request) {
 	
 	// Takes in user input from webpage makes user input lowercase for easy read
-	input := strings.ToLower(r.URL.Query().Get("input"))
+	input := r.URL.Query().Get("input")
 
 	// Get output from eliza using function
 	output := eliza.ReplyTo(input)
