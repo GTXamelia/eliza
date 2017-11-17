@@ -7,12 +7,18 @@ import (
     "strings"
 )
 
-func ReplyTo(statement string) string {
-    statement = preprocess(statement)
+// Function to retrieve reply and format input to give illusion of a response
+func ReplyTo(input string) string {
+    /* 
+    *  Processes input inverting words like "I" to "you"
+    *  This gives the bot a more intellegent response
+    *  Example: "I am happy" would reflet to "You are happy"
+    */  
+    input = preprocess(input)
 
-    for pattern, responses := range Psychobabble {
+    for pattern, responses := range phrases {
         re := regexp.MustCompile(pattern)
-        matches := re.FindStringSubmatch(statement)
+        matches := re.FindStringSubmatch(input)
 
         if len(matches) > 0 {
             var fragment string
@@ -20,21 +26,29 @@ func ReplyTo(statement string) string {
                 fragment = reflect(matches[1])
             }
 
-            response := randChoice(responses)
-            if strings.Contains(response, "%s") {
-                response = fmt.Sprintf(response, fragment)
+            // The output becomes a random choice of responses from the selection of responses
+            // If user enter "I don't know if you are a bot" the program will search to see if it has responses for "I don't" or any other key word
+            // Once a keyword is found it then randomizes a response from inside the keywords selection (Could have only 1 response, could have 10)
+            output := randChoice(responses)
+            
+            // Merges output and input to give illusion of intellegence
+            // If %s is found it 
+            if strings.Contains(output, "%s") {
+                output = fmt.Sprintf(output, fragment)
             }
-            return response
+            // Returns the output to the 'elizaInterface' function
+            return output
         }
     }
 
-    return randChoice(DefaultResponses)
+    // If a response cannot be found a random conversation starter is selected
+    return randChoice(conversationFail)
 }
 
-func preprocess(statement string) string {
-    statement = strings.TrimRight(statement, "\n.!")
-    statement = strings.ToLower(statement)
-    return statement
+func preprocess(input string) string {
+    input = strings.TrimRight(input, "\n.!")
+    input = strings.ToLower(input)
+    return input
 }
 
 func reflect(fragment string) string {
@@ -51,3 +65,10 @@ func randChoice(list []string) string {
     randIndex := rand.Intn(len(list))
     return list[randIndex]
 }
+
+
+
+    // N.B
+    // Implement dumb down function here
+    // N.B
+

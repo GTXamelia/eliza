@@ -23,7 +23,7 @@ form.keypress(function(event){
             setTimeout(function(){list.append(newItem), new Audio('assets/sound/responseAlert.mp3').play();}, 1000);
             
         }).fail(function(){
-            const newItem = "<p><b>Bot: </b> </p>";
+            const newItem = "<p><b>Bot is offline</b> </p>";
             list.append(newItem);
         });
 });
