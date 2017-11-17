@@ -18,20 +18,20 @@ inputText.keypress(function(e){
     const userInput = inputText.val();
     inputText.val("");
     const userPrompt = {"input" : userInput }
-    ouputText.append("<p style=\"color:white\">" + "<b>User: </b>" + userInput + "</p>");
+    ouputText.append("<p class=\"inputReply\">" + "<b>User: </b>" + userInput + "</p>");
     
     // When go can comunicate with webpage '.done' will run otherwise '.fail' will
     $.get("/elizaPrompt", userPrompt)
         .done(response => {
             // if the webpage can connect to the GO eliza files then the user will be prompted with a response from eliza
-            const output = "<p style=\"color:white\">" + "<b>Bot: </b>" + response + "</p>";
+            const output = "<img src=\"/assets/image/profile.png\" height=\"25\" width=\"25\" align=\"left\">" + "<p class=\"outputReply\">" + "<b>Gerry Adams: </b>" + response + "</p>";
 
             // The bots response with HTML elements are output to the webpage with an alert
             setTimeout(function(){ouputText.append(output), new Audio('assets/sound/responseAlert.mp3').play();}, 1000);
             
         }).fail(() => {
             // If the webpage cannot retrieve the GO eliza files the user will be informed
-            const output = "<p style=\"color:white\"><b>ALERT: </b>Bot is offline</p>";
+            const output = "<img src=\"profile.png\" height=\"25\" width=\"24\">" + "<p class=\"outputBox\"><b>ALERT: </b>Bot is offline</p>";
 
             // An alert is ouput with HTML elements informing the user
             setTimeout(function(){ouputText.append(output), new Audio('assets/sound/responseAlert.mp3').play();}, 1000);

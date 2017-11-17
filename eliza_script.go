@@ -39,6 +39,9 @@ var phrases = map[string][]string{
     `you (.*)`: {
         "We should be discussing you, not me friend.",
     },
+    `yes (.*)`: {
+        "Keep that yes, well need it in a referendum to unite the country",
+    },
 
     // About user
     `i need (.*)`: {
@@ -47,9 +50,9 @@ var phrases = map[string][]string{
         "There would be no need in a communist society friend.",
     },
     `i am (.*)`: {
-        "Did you think I'd care that you are %s?",
-        "Forget who you are, we're all Irish on this beautiful island of ours",
-        "Who you are in a republic made with the ideals of the 1916 rising matters little friend?",
+        "Did you think I'd care that you are %s? Were all equal.",
+        "Forget who you are, we're all free on this beautiful island of ours.",
+        "Who you are in a republic made with the ideals of the 1916 rising matters little friend.",
     },
     `i want (.*)`: {
         "Want, want, want. In a republic founded on the ideals of the 1916 rising there would be no want.",

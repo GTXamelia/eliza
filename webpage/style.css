@@ -1,17 +1,16 @@
+/* Styling that effects whole page */
 body {
-    margin: 2em 6em;
-    font-family: 'Press Start 2P', cursive;
-    background: url("media/images/essential/terminalbackground.jpg");
-    background-repeat: repeat-y;
-    background-position: top center;
-    background-attachment: fixed
+    background: url("assets/image/background.jpg");
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 
 .box {
 	margin: auto;
 	width: 50%;
-	height: 25%;
+	min-height: 100px;
 	box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.8), -12px 0 8px -4px rgba(0, 0, 0, 0.8);
 	background: #252934; /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(bottom, rgba(37,41,52,0.8), rgba(20,20,20,0.9999999)); /* For Safari 5.1 to 6.0 */
@@ -20,6 +19,17 @@ body {
     background: linear-gradient(to bottom, rgba(37,41,52,0.8), rgba(20,20,20,0.9999999)); /* Standard syntax (must be last)*/ 
 }
 
-.box {
+.inputReply {
+    color: white;
+}
+
+.outputReply {
 	color: white;
+}
+
+.inputBox {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    float: right;
 }

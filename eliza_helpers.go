@@ -74,4 +74,3 @@ func randChoice(list []string) string {
     // N.B
     // Implement dumb down function here
     // N.B
-
