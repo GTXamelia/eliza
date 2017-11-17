@@ -27,6 +27,10 @@ body {
 	color: white;
 }
 
+.userName {
+    color: #4d94b1!important;
+}
+
 .inputBox {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;

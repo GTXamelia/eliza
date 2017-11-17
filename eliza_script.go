@@ -5,6 +5,14 @@ package eliza
 var phrases = map[string][]string{
 
     // Replys
+    `gerry (.*)`: {
+        "Thats my name don't ware it out.",
+        "Only friends call me that, I count you among them friend.",
+    },
+    `adams (.*)`: {
+        "Thats my name don't ware it out.",
+        "Only friends call me that, I count you among them friend.",
+    },
     `because (.*)`: {
         "You are making excuses friend?",
         "Arlene Foster wouldn't even fall for such an excuse friend.",
@@ -71,6 +79,14 @@ var phrases = map[string][]string{
         "Who says I don't %s friend?",
         "Maybe some day I'll %s.",
         "I'll look more into %s.",
+    },
+    `how are you (.*)?`: {
+        "Quite good, and you friend?",
+        "Every new day is a good day and another step towards a united Ireland.",
+    },
+    `tiocfaidh (.*)`: {
+        "tiocfaidh ar la comrade",
+        "Ho ha up the rá",
     },
 }
 
