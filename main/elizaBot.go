@@ -35,6 +35,6 @@ func main() {
 	// HTTP request handler
 	// Directs HTTP requests
 	http.Handle("/", fileServer)
-	http.HandleFunc("/chat", elizaInterface)
+	http.HandleFunc("/elizaPrompt", elizaInterface)
 	http.ListenAndServe(":8080", nil)
 }
