@@ -28,20 +28,20 @@ var Psychobabble = map[string][]string{
 
 
     // Word Parse
-    `(.*)yes(.*)`: {
+    `yes`: {
         "You seem quite convicted I see.",
         "I'm glad you are so sure friend",
     },
-    `(.*)no(.*)`: {
+    `no`: {
         "You seem quite convicted I see.",
         "I'm glad you are so sure friend",
     },
-    `(.*)ira(.*)`: {
+    `ira`: {
         "What is this IRA you speak of?",
         "Never heard of the IRA they sound like a good crowd though.",
         "What I was never in the ra, I mean IRA.",
     },
-    `(.*)1916(.*)`: {
+    `1916`: {
         "Hold on right there, the 1916 was a great year?",
         "If I could go back to 1916, I would, and never regret it.",
     },
