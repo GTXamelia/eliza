@@ -1,8 +1,9 @@
 /* Styling that effects whole page */
 body {
     background: url("assets/image/background.jpg");
-    height: 100%; 
-    background-repeat: no-repeat;
+    min-height: 100%; 
+    min-width: 99%;
+    background-repeat: repeat;
     background-size: cover;
   }
 

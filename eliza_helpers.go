@@ -1,5 +1,6 @@
 package eliza
 
+// Imports used
 import (
     "fmt"
     "math/rand"
@@ -49,6 +50,16 @@ func ReplyTo(input string) string {
 func preprocess(input string) string {
     input = strings.TrimRight(input, "\n.!")
     input = strings.ToLower(input)
+
+    formattedInput := strings.Split(input, " ")
+	for i, word := range formattedInput {
+		formattedInput[i] = strings.ToLower(strings.Trim(word, ".! \n"))
+    }
+    
+    formattedInput = PostProcess(formattedInput)
+
+    input = strings.Join(formattedInput," ")
+
     return input
 }
 
@@ -63,14 +74,26 @@ func reflect(fragment string) string {
     return strings.Join(words, " ")
 }
 
+func PostProcess(parsed []string) (input []string) {
+	// initialize map of synonyms to easily check for words
+	search := make(map[string]string)
+	for key, list := range Synonymizer {
+		for _, word := range list {
+			search[word] = key
+		}
+	}
+
+	input = parsed
+	for i, word := range parsed {
+		if processedWord, ok := search[word]; ok {
+			input[i] = processedWord
+		}
+	}
+	return input
+}
+
 // Randomizes runmber for lists in elizas scripts
 func randChoice(list []string) string {
     randIndex := rand.Intn(len(list))
     return list[randIndex]
 }
-
-
-
-    // N.B
-    // Re-implement dumb down function here
-    // N.B

@@ -5,14 +5,6 @@ package eliza
 var phrases = map[string][]string{
 
     // Replys
-    `gerry (.*)`: {
-        "Thats my name don't ware it out.",
-        "Only friends call me that, I count you among them friend.",
-    },
-    `adams (.*)`: {
-        "Thats my name don't ware it out.",
-        "Only friends call me that, I count you among them friend.",
-    },
     `because (.*)`: {
         "You are making excuses friend?",
         "Arlene Foster wouldn't even fall for such an excuse friend.",
@@ -20,7 +12,7 @@ var phrases = map[string][]string{
     },
     `how (.*)`: {
         "how is that even a question friend?",
-        "if %s, is a question I could answer I wouldn't friend. I don't have time.",
+        "if '%s', is a question I could answer I wouldn't friend. I don't have time.",
     },
 
     // Word Parse
@@ -33,19 +25,24 @@ var phrases = map[string][]string{
         "Hold on right there, 1916 was a great year.",
         "If I could go back to 1916, I would, and never regret it.",
     },
+    `tiocfaidh`: {
+        "tiocfaidh ar la comrade",
+        "Ho ha up the rá",
+    },
+    `craic`: {
+        "Craic agus ceol, mo chara",
+    },
+    `uk (.*)`: {
+        "Never speak of the UK or any of it's members to me again",
+        "Please never talk about this topic again.",
+        "I really don't want to talk about '%s'",
+    },
     
     // Misc
     `(.*)\?`: {
         "Thats an odd question?",
         "You need to look inward before asking such questions",
         "Could you rephrase that questions friend",
-    },
-    `why (.*)`: {
-        "Why do you ask me why %s?",
-        "You ask why %s? When you should be asking yourself why you ask these question.",
-    },
-    `you (.*)`: {
-        "We should be discussing you, not me friend.",
     },
     `yes (.*)`: {
         "Keep that yes, well need it in a referendum to unite the country",
@@ -73,6 +70,12 @@ var phrases = map[string][]string{
         "You can't %s? Sounds like you didn't try.",
         "Try harder to %s, I believe in you friend.",
     },
+    `i would (.*)`: {
+        "You would %s, but there is little time for that while the North is still occupied!",
+        "Try harder to %s, I believe in you friend.",
+        
+    },
+
 
     // About bot
     `why don't you (.*)?`: {
@@ -84,9 +87,12 @@ var phrases = map[string][]string{
         "Quite good, and you friend?",
         "Every new day is a good day and another step towards a united Ireland.",
     },
-    `tiocfaidh (.*)`: {
-        "tiocfaidh ar la comrade",
-        "Ho ha up the rá",
+    `why (.*)`: {
+        "Why do you ask me why %s?",
+        "You ask why %s? When you should be asking yourself why you ask these question.",
+    },
+    `you (.*)`: {
+        "We should be discussing you, not me friend.",
     },
 }
 
@@ -125,10 +131,11 @@ var Reflected = map[string]string{
 // Using this to 'Dumb down' responses for bot
 // N.B Not yet integrated
 var Synonymizer = map[string][]string{
-    // Noraml
-	"want":       []string{"need", "require", "wish", "longing", "demand"},
+    // Expressions
+    "want":       []string{"need", "require", "demand"},
     
-    // Others
+    // Words
     "ira":      []string{"ra"},
     "uk":      []string{"england","kingdom","british"},
+    "gerry":      []string{"adams","madman"},
 }
