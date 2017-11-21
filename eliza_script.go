@@ -3,96 +3,82 @@ package eliza
 // High priority last, low priotiry first
 // Libary of phrases
 var phrases = map[string][]string{
-
-    // Replys
+    `i need (.*)`: {
+        "You say you need %s. But really what you need is a united Ireland friend.",
+        "In a country founded on the ideals of the 1916 rising you wouldn't need %s.",
+        "Do you really need %s, you could pick upa hobby, like learning Gaeilge mo chara",
+        "All you capatalist pigs are the same. %s when you could give, give back the country join a group like the IR... I mean sinn Féin youth.",
+    },
+    `why don't you (.*)`: {
+        "You don't know me well friend, if you think I don't %s.",
+        "I already am %s. Don't tell the media, don't want them to ruin my next snapchat story.",
+        "If I %s will you never ask me again?",
+    },
+    `why can't I (.*)`: {
+        "You can, if you try harder. I believe you can %s.",
+        "You can %s! But you just need to apply it on a smaller scale friend. 1916 was a small event in the grand scale of a united Ireland.",
+        "Lets say you can't %s. What else could you improve on?",
+    },
+    `i can't (.*)`: {
+        "If everyone in 1916 had your attitude we'd still be under a union jack.",
+        "Maybe you could %s, but you'd need to but a bit of effort into it.",
+        "You can %s, you just need inspiration, which you can find in 'My Little Book of Tweets' on amazon for only €8.00!",
+    },
+    `i am (.*)`: {
+        "You are %s? In a free republic that matters very little friend.",
+        "You say you are %s, but can you prove that?",
+    },
+    `are you (.*)`: {
+        "Never ask if I am %s, because this is not an interview.",
+        "You don't ask a woman her age, you don't ask a Gerry if he is %s. Them are the rules friend.",
+        "Please don't ask if I am %s. I will never give a straight answer.",
+    },
+    `what (.*)`: {
+        "Why are you asking me 'what %s'. This sounds likea questions you should ask a higher power my friend.",
+        "'what %s' is a weird question to ask a politician, I think a better question is why are you asking one?",
+        "I find google could answer this question give it a go on 'www.google.ie' not that .co.uk one.",
+    },
+    `how (.*)`: {
+        "If you are asking me 'how %s' then you have come to the wrong man for the job if you need an semi automatic.... car I can help with that.",
+        "Look inward and you may be able to find the answer. If not you could always vote Sinn Féin we will fix it before it's a problem.",
+        "What is it you're really asking friend?",
+        "I find google could answer this question give it a go on 'www.google.ie'. not on .co.uk.",
+    },
     `because (.*)`: {
         "You are making excuses friend?",
         "Arlene Foster wouldn't even fall for such an excuse friend.",
         "If %s, is your response then stick with it friend.",
     },
-    `how (.*)`: {
-        "how is that even a question friend?",
-        "if '%s', is a question I could answer I wouldn't friend. I don't have time.",
+    `sorry`: {
+        "No apologies needed.",
+        "Please don't apologies, there is no need.",
     },
-
-    // Word Parse
-    `ira`: {
-        "What is this IRA you speak of?",
-        "Never heard of the IRA they sound like a good crowd though.",
-        "What I was never in the ra, I mean IRA.",
+    `hello`: {
+        "Hello comrade, any craic?",
+        "Hey how are you friend?",
+        "Dia ghuit aon scéal agut?",
     },
-    `1916`: {
-        "Hold on right there, 1916 was a great year.",
-        "If I could go back to 1916, I would, and never regret it.",
+    `I think (.*)`: {
+        "Do you think %s? Or is that just a guess?",
+        "That's a fair thought so it is.",
+        "Can you confirm this?",
     },
-    `tiocfaidh`: {
-        "tiocfaidh ar la comrade",
-        "Ho ha up the rá",
+    `yes`: {
+        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
+        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
     },
-    `craic`: {
-        "Craic agus ceol, mo chara",
+    `is it (.*)`: {
+        "How do you know it is %s?",
+        "is it %s?",
     },
-    `uk (.*)`: {
-        "Never speak of the UK or any of it's members to me again",
-        "Please never talk about this topic again.",
-        "I really don't want to talk about '%s'",
+    `it is (.*)`: {
+        "Conviction a great trait!",
+        "Although conviction is great aways have a plan in case it isin't %s.",
     },
-    
-    // Misc
-    `(.*)\?`: {
-        "Thats an odd question?",
-        "You need to look inward before asking such questions",
-        "Could you rephrase that questions friend",
-    },
-    `yes (.*)`: {
-        "Keep that yes, well need it in a referendum to unite the country",
-    },
-
-    // About user
-    `i need (.*)`: {
-        "Do you really %s? there is occupied counties to liberate!",
-        "Why do you need %s when you could vote Sinn Fein?",
-        "There would be no need in a communist society friend.",
-    },
-    `i am (.*)`: {
-        "Did you think I'd care that you are %s? Were all equal.",
-        "Forget who you are, we're all free on this beautiful island of ours.",
-        "Who you are in a republic made with the ideals of the 1916 rising matters little friend.",
-    },
-    `i want (.*)`: {
-        "Want, want, want. In a republic founded on the ideals of the 1916 rising there would be no want.",
-        "Why do you want %s, when we could seize the means of production?",
-        "If you got %s, you would want more, capatalism at it's finest my friend.",
-        "you want %s, but we want a United Ireland. What's more important friend?",
-    },
-    `i can't (.*)`: {
-        "I never want to hear you say I can't, this republic was founded on I can.",
-        "You can't %s? Sounds like you didn't try.",
-        "Try harder to %s, I believe in you friend.",
-    },
-    `i would (.*)`: {
-        "You would %s, but there is little time for that while the North is still occupied!",
-        "Try harder to %s, I believe in you friend.",
-        
-    },
-
-
-    // About bot
-    `why don't you (.*)?`: {
-        "Who says I don't %s friend?",
-        "Maybe some day I'll %s.",
-        "I'll look more into %s.",
-    },
-    `how are you (.*)?`: {
-        "Quite good, and you friend?",
-        "Every new day is a good day and another step towards a united Ireland.",
-    },
-    `why (.*)`: {
-        "Why do you ask me why %s?",
-        "You ask why %s? When you should be asking yourself why you ask these question.",
-    },
-    `you (.*)`: {
-        "We should be discussing you, not me friend.",
+    `can you (.*)`: {
+        "Where did you hear I can %s?",
+        "Did the IR... Sinn Féin member tell you I can %s?",
+        "That's some tall tail. Who told you I can %s?",
     },
 }
 
@@ -112,30 +98,35 @@ var conversationFail = []string{
 
 // libary to change direction of conversation so bot can reply and talk to you
 var Reflected = map[string]string{
-    "am": "are",
-    "was": "were",
-    "I": "you",
-    "I'd": "you would",
-    "I've": "you have",
-    "I'll": "you will",
-    "my": "your",
-    "are": "am",
-    "you've": "I have",
-    "you'll": "I will",
-    "your": "my",
-    "yours": "mine",
-    "you": "me",
-    "me": "you",
+    "am":       "are",
+    "was":      "were",
+    "I":        "you",
+    "I'd":      "you would",
+    "I've":     "you have",
+    "I'll":     "you will",
+    "my":       "your",
+    "are":      "am",
+    "you've":   "I have",
+    "you'll":   "I will",
+    "you're":   "I'm",
+    "your":     "my",
+    "yours":    "mine",
+    "you":      "I",
+    "me":       "you",
 }
 
-// Using this to 'Dumb down' responses for bot
-// N.B Not yet integrated
+// Makes list of synomyms so the user can input multiple "hello" variations for example and still be understood
 var Synonymizer = map[string][]string{
     // Expressions
-    "want":       []string{"need", "require", "demand"},
+    "want":     []string{"need", "require", "demand"},
+    "i am":     []string{"i'm"},
+    "sorry":    []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
+    "thanks":   []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
+    "hello":    []string{"hey","hi","greetings","salutations","howya"},
     
     // Words
     "ira":      []string{"ra"},
-    "uk":      []string{"england","kingdom","british"},
-    "gerry":      []string{"adams","madman"},
+    "uk":       []string{"england","kingdom","british","union"},
+    "gerry":    []string{"adams","madman"},
+    "monarchy": []string{"royals","royal","queen","king","princess","prince","dutchess","duke","monarch"},
 }

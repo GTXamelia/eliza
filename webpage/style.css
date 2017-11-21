@@ -7,6 +7,11 @@ body {
     background-size: cover;
   }
 
+.header {
+    color: white;
+    margin: auto;
+    width: 50%;
+}
 
 .box {
 	margin: auto;
@@ -17,25 +22,9 @@ body {
 	background: -webkit-linear-gradient(bottom, rgba(37,41,52,0.8), rgba(20,20,20,0.9999999)); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom, rgba(37,41,52,0.8), rgba(20,20,20,0.9999999)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom, rgba(37,41,52,0.8), rgba(20,20,20,0.9999999)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, rgba(37,41,52,0.8), rgba(20,20,20,0.9999999)); /* Standard syntax (must be last)*/ 
-}
+    background: linear-gradient(to bottom, rgba(37,41,52,0.8), rgba(20,20,20,0.9999999)); /* Standard syntax*/ 
+    border:2px solid #4d94b1;
 
-.header {
-    color: white;
-    margin: auto;
-    width: 50%;
-}
-
-.inputReply {
-    color: white;
-}
-
-.outputReply {
-	color: white;
-}
-
-.userName {
-    color: #4d94b1!important;
 }
 
 .inputBox {
@@ -43,4 +32,22 @@ body {
     -moz-border-radius: 50px;
     border-radius: 50px;
     float: right;
+    width: 40%;
+    margin-top:5px;
+}
+
+.reply {
+    color: white;
+}
+
+.userName {
+    color: #4d94b1!important;
+}
+
+.profileImage {
+    height: 25px;
+    width: 25px;
+    float: left;
+    border:2px solid #4d94b1;
+    margin-left: 5px;
 }
