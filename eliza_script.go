@@ -14,7 +14,7 @@ var phrases = map[string][]string{
     },
     `tiocfaidh`: {
         "tiocfaidh ar la comrade",
-        "Ho ha up the rรก",
+        "Ho ha up the rá",
     },
     `craic`: {
         "Craic agus ceol, mo chara",
@@ -72,6 +72,11 @@ var phrases = map[string][]string{
         "Why don't you %s?",
     },
 
+    `why don't you (.*)?`: {
+        "Who says I don't %s friend?",
+        "Maybe some day I'll %s.",
+        "I'll look more into %s.",
+    },
     `why don't you (.*)`: {
         "You don't know me well friend, if you think I don't %s.",
         "I already am %s. Don't tell the media, don't want them to ruin my next snapchat story.",
@@ -87,17 +92,42 @@ var phrases = map[string][]string{
         "You don't ask a woman her age, you don't ask a Gerry if he is %s. Them are the rules friend.",
         "Please don't ask if I am %s. I will never give a straight answer.",
     },
-    `what (.*)`: {
-        "Why are you asking me 'what %s'. This sounds likea questions you should ask a higher power my friend.",
-        "'what %s' is a weird question to ask a politician, I think a better question is why are you asking one?",
-        "I find google could answer this question give it a go on 'www.google.ie' not that .co.uk one.",
-    },
     `how (.*)`: {
         "If you are asking me 'how %s' then you have come to the wrong man for the job if you need an semi automatic.... car I can help with that.",
         "Look inward and you may be able to find the answer. If not you could always vote Sinn Féin we will fix it before it's a problem.",
         "What is it you're really asking friend?",
         "I find google could answer this question give it a go on 'www.google.ie'. not on .co.uk.",
     },
+    `is it (.*)`: {
+        "How do you know it is %s?",
+        "is it %s?",
+    },
+    `can you (.*)`: {
+        "Where did you hear I can %s?",
+        "Did the IR... Sinn Féin member tell you I can %s?",
+        "That's some tall tail. Who told you I can %s?",
+    },
+    `can I (.*)`: {
+        "Can you %s?",
+        "If you could %s, how would you put that into action to reclaim the north?",
+        "Say you could %s, would Ireland be any better off?",
+    },
+    `is there (.*)`: {
+        "Why would you ask is there %s?",
+        "Maybe there is %s. We can't guess these things.",
+        "Would you like there to be %s?",
+    },
+    `why (.*)`: {
+        "You're asking why %s. When the real question is when will the Scotland leave the UK and ultimately destroy the UK and it's fleg.",
+        "You ask why %s? When you should be asking yourself why you ask these question.",
+    },
+
+    `what (.*)`: {
+        "Why are you asking me 'what %s'. This sounds likea questions you should ask a higher power my friend.",
+        "'what %s' is a weird question to ask a politician, I think a better question is why are you asking one?",
+        "I find google could answer this question give it a go on 'www.google.ie' not that .co.uk one.",
+    },
+    
     `because (.*)`: {
         "You are making excuses friend?",
         "Arlene Foster wouldn't even fall for such an excuse friend.",
@@ -116,39 +146,15 @@ var phrases = map[string][]string{
         "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
         "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
     },
-    `is it (.*)`: {
-        "How do you know it is %s?",
-        "is it %s?",
-    },
     `it is (.*)`: {
         "Conviction a great trait!",
         "Although conviction is great aways have a plan in case it isin't %s.",
-    },
-    `can you (.*)`: {
-        "Where did you hear I can %s?",
-        "Did the IR... Sinn Féin member tell you I can %s?",
-        "That's some tall tail. Who told you I can %s?",
-    },
-    `can I (.*)`: {
-        "Can you %s?",
-        "If you could %s, how would you put that into action to reclaim the north?",
-        "Say you could %s, would Ireland be any better off?",
     },
     `you are (.*)`: {
         "Is that an accusation?",
         "If the pres find out I'm %s, I'll deny it. Just like the ra, which I was never part of.",
         "Would I lose snapchat followers if they found out I am %s?",
         "So what if I'm %s.",
-    },
-    `why don't you (.*)?`: {
-        "Who says I don't %s friend?",
-        "Maybe some day I'll %s.",
-        "I'll look more into %s.",
-    },
-    `is there (.*)`: {
-        "Why would you ask is there %s?",
-        "Maybe there is %s. We can't guess these things.",
-        "Would you like there to be %s?",
     },
     `my (.*)`: {
         "When your %s, does it make you wish for a united Ireland even more?",
@@ -157,10 +163,6 @@ var phrases = map[string][]string{
         "Please I am not being interviewed by someone I call a friend.",
         "Why do you care whether I %s?",
         "We should be discussing you, not me friend.",
-    },
-    `why (.*)`: {
-        "You're asking why %s. When the real question is when will the Scotland leave the UK and ultimately destroy the UK and it's fleg.",
-        "You ask why %s? When you should be asking yourself why you ask these question.",
     },
     `(.*)\?`: {
         "Thats an odd question?",
