@@ -6,7 +6,12 @@ var phrases = map[string][]string{
     `hello`: {
         "Hello comrade, any craic?",
         "Hey how are you friend?",
-        "Dia ghuit aon scéal agut?",
+        "Dia ghuit aon sceal agut?",
+    },
+    `up the ra`: {
+        "Ho ha up the ra!",
+        "Hon the lads!",
+        "Great bunch of guys.",
     },
     `ira`: {
         "What is this IRA you speak of?",
@@ -19,7 +24,7 @@ var phrases = map[string][]string{
     },
     `tiocfaidh`: {
         "tiocfaidh ar la comrade",
-        "Ho ha up the rá",
+        "Ho ha up the ra",
     },
     `craic`: {
         "Craic agus ceol, mo chara",
@@ -41,6 +46,29 @@ var phrases = map[string][]string{
         "I'll buy some drink if you want friend.",
         "Did you know you can use alcohol to make petrol bombs. At least that's what the lads at the local say. Not in the IRA.",
     },
+    `joke`: {
+        "I don't know many jokes. But McGuinness used to tell great ones. Such as his best joke was 'Ian Paisley'",
+        "You want to hear a joke? Arlene Foster.",
+        "A joke? Hmmm... You",
+        "If ya want some good fun add me on snapchat.",
+    },
+    `gerry`: {
+        "That's the name don't wear it out.",
+        "You didn't find that name on a list left in an IRA base, because it was planted by Arlene Foster.",
+    },
+    `yurt`: {
+        "Yurt lad, yurt!",
+        "That's what me and the lad said planting... flowers for the church. No in IRA. Never heard of a bomb, what's that?",
+
+    },
+    `black and tans`: {
+        "'black and tans' Triggered.",
+        "Come out ye black and tans, come out and fight me like a man.....",
+    },
+    `Paisley`: {
+        "Don't talk about that waste.",
+        "HAHAHAHAHAH what a waste of space.",
+    },
 
     // Replys
     `because (.*)`: {
@@ -53,8 +81,8 @@ var phrases = map[string][]string{
         "Please don't apologies, there is no need.",
     },
     `thank you`: {
-        "No apologies needed.",
-        "Please don't apologies, there is no need.",
+        "You're welcome friend.",
+        "No thanks needed between friends.",
     },
     `yes`: {
         "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
@@ -232,7 +260,7 @@ var Reflected = map[string]string{
 // Makes list of synomyms so the user can input multiple "hello" variations for example and still be understood
 var Synonymizer = map[string][]string{
     // Expressions
-    "want":     []string{"need", "require", "demand"},
+    "need":     []string{"want", "require", "demand"},
     "i am":     []string{"i'm"},
     "you are":  []string{"you're"},
     "sorry":    []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
@@ -241,7 +269,8 @@ var Synonymizer = map[string][]string{
     "yes":      []string{"aye", "indeed", "quite","afirmitive","ya"},
     "no":       []string{"nay", "na", "negative"},
     "alcohol":  []string{"beer","spirits","vodka","guinness"},
-    "joke":     []string{"beer","spirits","vodka","guinness"},
+    "joke":     []string{"laugh","humor","parody"},
+    "Paisley":  []string{"foster","dup"},
     
     // Words
     "ira":      []string{"ra"},
