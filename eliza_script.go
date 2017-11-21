@@ -23,14 +23,23 @@ var phrases = map[string][]string{
     },
     `craic`: {
         "Craic agus ceol, mo chara",
+        "any craic with your friend?",
     },
-    `uk (.*)`: {
+    `uk`: {
         "Never speak of the UK or any of it's members to me again",
         "Please never talk about this topic again.",
-        "I really don't want to talk about '%s'",
+        "The UK has done more damage to the world than good.",
+        "Triggered 'UK",
     },
-    `monarchy (.*)`: {
-        "Ah, please don't talk about %s.",
+    `monarchy`: {
+        "Ah, please don't talk about the monarchy. Every time their names are spoken to me Arlene Foster builds another 'Peace Wall'",
+        "Down with those who oppressed the Irish people",
+    },
+    `alcohol`: {
+        "Lad I could do with going to the local.",
+        "Oh jasus lad to the local so?",
+        "I'll buy some drink if you want friend.",
+        "Did you know you can use alcohol to make petrol bombs. At least that's what the lads at the local say. Not in the IRA.",
     },
 
     // Replys
@@ -43,7 +52,15 @@ var phrases = map[string][]string{
         "No apologies needed.",
         "Please don't apologies, there is no need.",
     },
+    `thank you`: {
+        "No apologies needed.",
+        "Please don't apologies, there is no need.",
+    },
     `yes`: {
+        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
+        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
+    },
+    `no`: {
         "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
         "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
     },
@@ -169,6 +186,14 @@ var phrases = map[string][]string{
         "You're not a Gardai are you?",
         "Are you from the press?",
     },
+    `tell me(.*)`: {
+        "Why would I tell you %s?",
+        "Friend I don't need to tell you %s.",
+    },
+    `how are you`: {
+        "I'm good friend, how are you?",
+        "Nice of you to ask. I'm good friend.",
+    },
 }
 
 // Failing to find an answer in the libary above this libary will be used
@@ -211,13 +236,16 @@ var Synonymizer = map[string][]string{
     "i am":     []string{"i'm"},
     "you are":  []string{"you're"},
     "sorry":    []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
-    "thanks":   []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
     "hello":    []string{"hey","hi","greetings","salutations","howya"},
-    "thank you":     []string{"thanks","bless","praise"},
+    "thank you":[]string{"thanks","bless","praise"},
+    "yes":      []string{"aye", "indeed", "quite","afirmitive","ya"},
+    "no":       []string{"nay", "na", "negative"},
+    "alcohol":  []string{"beer","spirits","vodka","guinness"},
+    "joke":     []string{"beer","spirits","vodka","guinness"},
     
     // Words
     "ira":      []string{"ra"},
-    "uk":       []string{"england","kingdom","british","union"},
+    "uk":       []string{"england","kingdom","union"},
     "gerry":    []string{"adams","madman"},
     "monarchy": []string{"royals","royal","queen","king","princess","prince","dutchess","duke","monarch"},
 }
