@@ -198,7 +198,7 @@ var phrases = map[string][]string{
         "You ask why %s? When you should be asking yourself why you ask these question.",
     },
     `what (.*)`: {
-        "Why are you asking me 'what %s'. This sounds likea questions you should ask a higher power my friend.",
+        "Why are you asking me 'what %s'. This sounds like a questions you should ask a higher power my friend.",
         "'what %s' is a weird question to ask a politician, I think a better question is why are you asking one?",
         "I find google could answer this question give it a go on 'www.google.ie' not that .co.uk one.",
     },
@@ -208,12 +208,6 @@ var phrases = map[string][]string{
         "Would I lose snapchat followers if they found out I am %s?",
         "So what if I'm %s.",
     },
-    `(.*)\?`: {
-        "Thats an odd question?",
-        "Could you rephrase that questions friend",
-        "You're not a Gardai are you?",
-        "Are you from the press?",
-    },
     `tell me(.*)`: {
         "Why would I tell you %s?",
         "Friend I don't need to tell you %s.",
@@ -221,6 +215,12 @@ var phrases = map[string][]string{
     `how are you`: {
         "I'm good friend, how are you?",
         "Nice of you to ask. I'm good friend.",
+    },
+    `(.*)\?`: {
+        "Thats an odd question?",
+        "Could you rephrase that questions friend",
+        "You're not a Gardai are you?",
+        "Are you from the press?",
     },
 }
 
