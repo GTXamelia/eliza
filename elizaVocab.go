@@ -54,11 +54,6 @@ var phrases = map[string][]string{
         "That's the name don't wear it out.",
         "You didn't find that name on a list left in an IRA base, because it was planted by Arlene Foster.",
     },
-    `yurt`: {
-        "Yurt lad, yurt!",
-        "That's what me and the lad said planting... flowers for the church. No in IRA. Never heard of a bomb, what's that?",
-
-    },
     `black and tans`: {
         "'black and tans' Triggered.",
         "Come out ye black and tans, come out and fight me like a man.....",
@@ -66,6 +61,11 @@ var phrases = map[string][]string{
     `Paisley`: {
         "Don't talk about that waste.",
         "HAHAHAHAHAH what a waste of space.",
+    },
+    `yurt`: {
+        "Yurt lad, yurt!",
+        "That's what me and the lad said planting... flowers for the church. No in IRA. Never heard of a bomb, what's that?",
+
     },
 
     // Replys
