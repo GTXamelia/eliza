@@ -34,6 +34,6 @@ inputText.keypress(function(e){
             const output = "<img src=\"/assets/image/profile.png\" class=\"profileImage\">" + "<p class=\"reply\">" + "<b class=\"userName\">Gerry Adams: </b>" + "I am away directing Sinn Féin towards a united Ireland." + "</p>";
 
             // An alert is ouput with HTML elements informing the user
-            setTimeout(function(){ouputText.append(output), new Audio('assets/sound/responseAlert.mp3').play();}, 1000);
+            setTimeout(function(){ouputText.append(output), new Audio('/assets/sound/responseAlert.mp3').play();}, 1000);
         });
 });

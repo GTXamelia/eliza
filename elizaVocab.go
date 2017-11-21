@@ -8,10 +8,8 @@ var phrases = map[string][]string{
         "Hey how are you friend?",
         "Dia ghuit aon sceal agut?",
     },
-    `up the ra`: {
+    `up the ira`: {
         "Ho ha up the ra!",
-        "Hon the lads!",
-        "Great bunch of guys.",
     },
     `ira`: {
         "What is this IRA you speak of?",
