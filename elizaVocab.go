@@ -166,12 +166,6 @@ var phrases = map[string][]string{
         "You don't ask a woman her age, you don't ask a Gerry if he is %s. Them are the rules friend.",
         "Please don't ask if I am %s. I will never give a straight answer.",
     },
-    `how (.*)`: {
-        "If you are asking me 'how %s' then you have come to the wrong man for the job if you need an semi automatic.... car I can help with that.",
-        "Look inward and you may be able to find the answer. If not you could always vote Sinn Féin we will fix it before it's a problem.",
-        "What is it you're really asking friend?",
-        "I find google could answer this question give it a go on 'www.google.ie'. not on .co.uk.",
-    },
     `is it (.*)`: {
         "How do you know it is %s?",
         "is it %s?",
@@ -213,6 +207,12 @@ var phrases = map[string][]string{
     `how are you`: {
         "I'm good friend, how are you?",
         "Nice of you to ask. I'm good friend.",
+    },
+    `how (.*)`: {
+        "If you are asking me 'how %s' then you have come to the wrong man for the job if you need an semi automatic.... car I can help with that.",
+        "Look inward and you may be able to find the answer. If not you could always vote Sinn Féin we will fix it before it's a problem.",
+        "What is it you're really asking friend?",
+        "I find google could answer this question give it a go on 'www.google.ie'. not on .co.uk.",
     },
     `(.*)\?`: {
         "Thats an odd question?",
