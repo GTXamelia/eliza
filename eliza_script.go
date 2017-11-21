@@ -3,6 +3,11 @@ package eliza
 // Libary of phrases
 var phrases = map[string][]string{
     // Word Parse
+    `hello`: {
+        "Hello comrade, any craic?",
+        "Hey how are you friend?",
+        "Dia ghuit aon scéal agut?",
+    },
     `ira`: {
         "What is this IRA you speak of?",
         "Never heard of the IRA they sound like a good crowd though.",
@@ -28,7 +33,34 @@ var phrases = map[string][]string{
         "Ah, please don't talk about %s.",
     },
 
+    // Replys
+    `because (.*)`: {
+        "You are making excuses friend?",
+        "Arlene Foster wouldn't even fall for such an excuse friend.",
+        "If %s, is your response then stick with it friend.",
+    },
+    `sorry`: {
+        "No apologies needed.",
+        "Please don't apologies, there is no need.",
+    },
+    `yes`: {
+        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
+        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
+    },
+    `it is (.*)`: {
+        "Conviction a great trait!",
+        "Although conviction is great aways have a plan in case it isin't %s.",
+    },
+    `my (.*)`: {
+        "When your %s, does it make you wish for a united Ireland even more?",
+    },
+    `you (.*)`: {
+        "Please I am not being interviewed by someone I call a friend.",
+        "Why do you care whether I %s?",
+        "We should be discussing you, not me friend.",
+    },
 
+    // About user
     `i need (.*)`: {
         "You say you need %s. But really what you need is a united Ireland friend.",
         "In a country founded on the ideals of the 1916 rising you wouldn't need %s.",
@@ -72,15 +104,14 @@ var phrases = map[string][]string{
         "Why don't you %s?",
     },
 
-    `why don't you (.*)?`: {
-        "Who says I don't %s friend?",
-        "Maybe some day I'll %s.",
-        "I'll look more into %s.",
-    },
+    // Questions
     `why don't you (.*)`: {
         "You don't know me well friend, if you think I don't %s.",
         "I already am %s. Don't tell the media, don't want them to ruin my next snapchat story.",
         "If I %s will you never ask me again?",
+        "Who says I don't %s friend?",
+        "Maybe some day I'll %s.",
+        "I'll look more into %s.",
     },
     `why can't I (.*)`: {
         "You can, if you try harder. I believe you can %s.",
@@ -121,48 +152,16 @@ var phrases = map[string][]string{
         "You're asking why %s. When the real question is when will the Scotland leave the UK and ultimately destroy the UK and it's fleg.",
         "You ask why %s? When you should be asking yourself why you ask these question.",
     },
-
     `what (.*)`: {
         "Why are you asking me 'what %s'. This sounds likea questions you should ask a higher power my friend.",
         "'what %s' is a weird question to ask a politician, I think a better question is why are you asking one?",
         "I find google could answer this question give it a go on 'www.google.ie' not that .co.uk one.",
-    },
-    
-    `because (.*)`: {
-        "You are making excuses friend?",
-        "Arlene Foster wouldn't even fall for such an excuse friend.",
-        "If %s, is your response then stick with it friend.",
-    },
-    `sorry`: {
-        "No apologies needed.",
-        "Please don't apologies, there is no need.",
-    },
-    `hello`: {
-        "Hello comrade, any craic?",
-        "Hey how are you friend?",
-        "Dia ghuit aon scéal agut?",
-    },
-    `yes`: {
-        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
-        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
-    },
-    `it is (.*)`: {
-        "Conviction a great trait!",
-        "Although conviction is great aways have a plan in case it isin't %s.",
     },
     `you are (.*)`: {
         "Is that an accusation?",
         "If the pres find out I'm %s, I'll deny it. Just like the ra, which I was never part of.",
         "Would I lose snapchat followers if they found out I am %s?",
         "So what if I'm %s.",
-    },
-    `my (.*)`: {
-        "When your %s, does it make you wish for a united Ireland even more?",
-    },
-    `you (.*)`: {
-        "Please I am not being interviewed by someone I call a friend.",
-        "Why do you care whether I %s?",
-        "We should be discussing you, not me friend.",
     },
     `(.*)\?`: {
         "Thats an odd question?",
@@ -214,6 +213,7 @@ var Synonymizer = map[string][]string{
     "sorry":    []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
     "thanks":   []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
     "hello":    []string{"hey","hi","greetings","salutations","howya"},
+    "thank you":     []string{"thanks","bless","praise"},
     
     // Words
     "ira":      []string{"ra"},
