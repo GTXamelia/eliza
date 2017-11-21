@@ -2,21 +2,41 @@ package eliza
 
 // Libary of phrases
 var phrases = map[string][]string{
+    // Word Parse
+    `ira`: {
+        "What is this IRA you speak of?",
+        "Never heard of the IRA they sound like a good crowd though.",
+        "What I was never in the ra, I mean IRA.",
+    },
+    `1916`: {
+        "Hold on right there, 1916 was a great year.",
+        "If I could go back to 1916, I would, and never regret it.",
+    },
+    `tiocfaidh`: {
+        "tiocfaidh ar la comrade",
+        "Ho ha up the rรก",
+    },
+    `craic`: {
+        "Craic agus ceol, mo chara",
+    },
+    `uk (.*)`: {
+        "Never speak of the UK or any of it's members to me again",
+        "Please never talk about this topic again.",
+        "I really don't want to talk about '%s'",
+    },
+    `monarchy (.*)`: {
+        "Ah, please don't talk about %s.",
+    },
+
+
     `i need (.*)`: {
         "You say you need %s. But really what you need is a united Ireland friend.",
         "In a country founded on the ideals of the 1916 rising you wouldn't need %s.",
         "Do you really need %s, you could pick upa hobby, like learning Gaeilge mo chara",
         "All you capatalist pigs are the same. %s when you could give, give back the country join a group like the IR... I mean sinn Féin youth.",
-    },
-    `why don't you (.*)`: {
-        "You don't know me well friend, if you think I don't %s.",
-        "I already am %s. Don't tell the media, don't want them to ruin my next snapchat story.",
-        "If I %s will you never ask me again?",
-    },
-    `why can't I (.*)`: {
-        "You can, if you try harder. I believe you can %s.",
-        "You can %s! But you just need to apply it on a smaller scale friend. 1916 was a small event in the grand scale of a united Ireland.",
-        "Lets say you can't %s. What else could you improve on?",
+        "Do you really %s? there is occupied counties to liberate!",
+        "Why do you need %s when you could vote Sinn Fein?",
+        "There would be no need in a communist society friend.",
     },
     `i can't (.*)`: {
         "If everyone in 1916 had your attitude we'd still be under a union jack.",
@@ -26,6 +46,41 @@ var phrases = map[string][]string{
     `i am (.*)`: {
         "You are %s? In a free republic that matters very little friend.",
         "You say you are %s, but can you prove that?",
+    },
+    `I think (.*)`: {
+        "Do you think %s? Or is that just a guess?",
+        "That's a fair thought so it is.",
+        "Can you confirm this?",
+    },
+    `i feel (.*)`: {
+        "You feel %s, but I feel the pain of a divided Ireland, and won't sleep until it's repaired!",
+        "When I feel %s, I go to the local and forget about it.",
+        "You might feel %s, but that is only temporary. Soon Ireland will be united under Sinn Féin, and all your worries will be gone.",
+    },
+    `i have (.*)`: {
+        "You might have %s. But I have a great arsenal.... season pass to all their games. Not in the IRA.",
+        "Do you really have %s. You need ot provide evidence otherwise people will say you were in the ra.",
+        "Well I have some great memes. Now what have you got to say?",
+    },
+    `i would (.*)`: {
+        "You say you would %s. But what would that accomplish in the grand scale of a Sinn Féin Ireland?",
+        "Why would you %s?",
+        "Who else knows that you would %s?",
+    },
+    `i don't (.*)`: {
+        "I heard you do %s, can't lie to the Gerry.",
+        "Why don't you %s?",
+    },
+
+    `why don't you (.*)`: {
+        "You don't know me well friend, if you think I don't %s.",
+        "I already am %s. Don't tell the media, don't want them to ruin my next snapchat story.",
+        "If I %s will you never ask me again?",
+    },
+    `why can't I (.*)`: {
+        "You can, if you try harder. I believe you can %s.",
+        "You can %s! But you just need to apply it on a smaller scale friend. 1916 was a small event in the grand scale of a united Ireland.",
+        "Lets say you can't %s. What else could you improve on?",
     },
     `are you (.*)`: {
         "Never ask if I am %s, because this is not an interview.",
@@ -57,11 +112,6 @@ var phrases = map[string][]string{
         "Hey how are you friend?",
         "Dia ghuit aon scéal agut?",
     },
-    `I think (.*)`: {
-        "Do you think %s? Or is that just a guess?",
-        "That's a fair thought so it is.",
-        "Can you confirm this?",
-    },
     `yes`: {
         "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
         "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
@@ -90,25 +140,6 @@ var phrases = map[string][]string{
         "Would I lose snapchat followers if they found out I am %s?",
         "So what if I'm %s.",
     },
-    `i don't (.*)`: {
-        "I heard you do %s, can't lie to the Gerry.",
-        "Why don't you %s?",
-    },
-    `i feel (.*)`: {
-        "You feel %s, but I feel the pain of a divided Ireland, and won't sleep until it's repaired!",
-        "When I feel %s, I go to the local and forget about it.",
-        "You might feel %s, but that is only temporary. Soon Ireland will be united under Sinn Féin, and all your worries will be gone.",
-    },
-    `i have (.*)`: {
-        "You might have %s. But I have a great arsenal.... season pass to all their games. Not in the IRA.",
-        "Do you really have %s. You need ot provide evidence otherwise people will say you were in the ra.",
-        "Well I have some great memes. Now what have you got to say?",
-    },
-    `i would (.*)`: {
-        "You say you would %s. But what would that accomplish in the grand scale of a Sinn Féin Ireland?",
-        "Why would you %s?",
-        "Who else knows that you would %s?",
-    },
     `why don't you (.*)?`: {
         "Who says I don't %s friend?",
         "Maybe some day I'll %s.",
@@ -122,7 +153,6 @@ var phrases = map[string][]string{
     `my (.*)`: {
         "When your %s, does it make you wish for a united Ireland even more?",
     },
-
     `you (.*)`: {
         "Please I am not being interviewed by someone I call a friend.",
         "Why do you care whether I %s?",
@@ -132,41 +162,12 @@ var phrases = map[string][]string{
         "You're asking why %s. When the real question is when will the Scotland leave the UK and ultimately destroy the UK and it's fleg.",
         "You ask why %s? When you should be asking yourself why you ask these question.",
     },
-    `i want (.*)`: {
-        "Do you really %s? there is occupied counties to liberate!",
-        "Why do you need %s when you could vote Sinn Fein?",
-        "There would be no need in a communist society friend.",
-    },
     `(.*)\?`: {
         "Thats an odd question?",
         "Could you rephrase that questions friend",
         "You're not a Gardai are you?",
-        "Are you from the pres?",
+        "Are you from the press?",
     },
-
-    // Word Parse
-    `ira`: {
-        "What is this IRA you speak of?",
-        "Never heard of the IRA they sound like a good crowd though.",
-        "What I was never in the ra, I mean IRA.",
-    },
-    `1916`: {
-        "Hold on right there, 1916 was a great year.",
-        "If I could go back to 1916, I would, and never regret it.",
-    },
-    `tiocfaidh`: {
-        "tiocfaidh ar la comrade",
-        "Ho ha up the rรก",
-    },
-    `craic`: {
-        "Craic agus ceol, mo chara",
-    },
-    `uk (.*)`: {
-        "Never speak of the UK or any of it's members to me again",
-        "Please never talk about this topic again.",
-        "I really don't want to talk about '%s'",
-    },
-    
 }
 
 // Failing to find an answer in the libary above this libary will be used
@@ -207,7 +208,7 @@ var Synonymizer = map[string][]string{
     // Expressions
     "want":     []string{"need", "require", "demand"},
     "i am":     []string{"i'm"},
-    "you are":     []string{"you're"},
+    "you are":  []string{"you're"},
     "sorry":    []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
     "thanks":   []string{"regretful","apologies","pardon","retract","atone","forgiveness"},
     "hello":    []string{"hey","hi","greetings","salutations","howya"},

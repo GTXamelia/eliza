@@ -10,11 +10,9 @@ import (
 
 // Function to retrieve reply and format input to give illusion of a response
 func ReplyTo(input string) string {
-    /* 
-    *  Processes input inverting words like "I" to "you"
-    *  This gives the bot a more intellegent response
-    *  Example: "I am happy" would reflet to "You are happy"
-    */  
+
+    // Passes input into preprocess function
+    // Function then sends back input
     input = preprocess(input)
 
     for pattern, responses := range phrases {
