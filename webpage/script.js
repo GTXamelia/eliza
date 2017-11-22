@@ -22,15 +22,12 @@ inputText.keypress(function(e){
     const userPrompt = {"input" : userInput }
     ouputText.append("<img src=\"/assets/image/user.jpg\" class=\"profileImage\">" + "<p class=\"reply\">" + "<b class=\"userName\">User: </b>" + userInput + "</p>");
 
-    console.log(userInput.indexOf("sing"));
-
     if(userInput.indexOf("sing") > -1){
         singSong.play();
     }
     if(userInput.indexOf("stop") > -1){
         singSong.pause();
         singSong.currentTime = 0;
-
     };
     
     // When go can comunicate with webpage '.done' will run otherwise '.fail' will

@@ -2,7 +2,6 @@ package eliza
 
 // Libary of phrases
 var phrases = map[string][]string{
-    // Word Parse
     `hello`: {
         "Hello comrade, any craic?",
         "Hey how are you friend?",
@@ -32,7 +31,7 @@ var phrases = map[string][]string{
         "Never speak of the UK or any of it's members to me again",
         "Please never talk about this topic again.",
         "The UK has done more damage to the world than good.",
-        "Triggered 'UK",
+        "Triggered 'UK'",
     },
     `monarchy`: {
         "Ah, please don't talk about the monarchy. Every time their names are spoken to me Arlene Foster builds another 'Peace Wall'",
@@ -42,7 +41,6 @@ var phrases = map[string][]string{
         "Lad I could do with going to the local.",
         "Oh jasus lad to the local so?",
         "I'll buy some drink if you want friend.",
-        "Did you know you can use alcohol to make petrol bombs. At least that's what the lads at the local say. Not in the IRA.",
     },
     `joke`: {
         "I don't know many jokes. But McGuinness used to tell great ones. Such as his best joke was 'Ian Paisley'",
@@ -64,11 +62,8 @@ var phrases = map[string][]string{
     },
     `yurt`: {
         "Yurt lad, yurt!",
-        "That's what me and the lad said planting... flowers for the church. No in IRA. Never heard of a bomb, what's that?",
-
+        "That's what me and the lads said planting... flowers for the church. No in IRA.",
     },
-
-    // Replys
     `because (.*)`: {
         "You are making excuses friend?",
         "Arlene Foster wouldn't even fall for such an excuse friend.",
@@ -82,14 +77,6 @@ var phrases = map[string][]string{
         "You're welcome friend.",
         "No thanks needed between friends.",
     },
-    `yes`: {
-        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
-        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
-    },
-    `no`: {
-        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
-        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
-    },
     `it is (.*)`: {
         "Conviction a great trait!",
         "Although conviction is great aways have a plan in case it isin't %s.",
@@ -97,13 +84,6 @@ var phrases = map[string][]string{
     `my (.*)`: {
         "When your %s, does it make you wish for a united Ireland even more?",
     },
-    `you (.*)`: {
-        "Please I am not being interviewed by someone I call a friend.",
-        "Why do you care whether I %s?",
-        "We should be discussing you, not me friend.",
-    },
-
-    // About user
     `i need (.*)`: {
         "You say you need %s. But really what you need is a united Ireland friend.",
         "In a country founded on the ideals of the 1916 rising you wouldn't need %s.",
@@ -146,8 +126,6 @@ var phrases = map[string][]string{
         "I heard you do %s, can't lie to the Gerry.",
         "Why don't you %s?",
     },
-
-    // Questions
     `why don't you (.*)`: {
         "You don't know me well friend, if you think I don't %s.",
         "I already am %s. Don't tell the media, don't want them to ruin my next snapchat story.",
@@ -185,10 +163,6 @@ var phrases = map[string][]string{
         "Maybe there is %s. We can't guess these things.",
         "Would you like there to be %s?",
     },
-    `why (.*)`: {
-        "You're asking why %s. When the real question is when will the Scotland leave the UK and ultimately destroy the UK and it's fleg.",
-        "You ask why %s? When you should be asking yourself why you ask these question.",
-    },
     `what (.*)`: {
         "Why are you asking me 'what %s'. This sounds like a questions you should ask a higher power my friend.",
         "'what %s' is a weird question to ask a politician, I think a better question is why are you asking one?",
@@ -214,6 +188,15 @@ var phrases = map[string][]string{
         "What is it you're really asking friend?",
         "I find google could answer this question give it a go on 'www.google.ie'. not on .co.uk.",
     },
+    `you (.*)`: {
+        "Please I am not being interviewed by someone I call a friend.",
+        "Why do you care whether I %s?",
+        "We should be discussing you, not me friend.",
+    },
+    `why (.*)`: {
+        "You're asking why %s. When the real question is when will the Scotland leave the UK and ultimately destroy the UK and it's fleg.",
+        "You ask why %s? When you should be asking yourself why you ask these question.",
+    },
     `stop`: {
         "I'll stop for you comrade.",
         "I'll stop for now friend.",
@@ -225,6 +208,14 @@ var phrases = map[string][]string{
         "Come out ye black and tans.....",
         "Here I go!",
         "I'll start now, just for you.",
+    },
+    `yes`: {
+        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
+        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
+    },
+    `no`: {
+        "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
+        "You seem certain. People who are certain with themselfs make great shots with..... a basketball.",
     },
     `(.*)\?`: {
         "Thats an odd question?",
