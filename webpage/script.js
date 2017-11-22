@@ -23,10 +23,10 @@ inputText.keypress(function(e){
     ouputText.append("<img src=\"/assets/image/user.jpg\" class=\"profileImage\">" + "<p class=\"reply\">" + "<b class=\"userName\">User: </b>" + userInput + "</p>");
 
     if(userInput.indexOf("sing") > -1){
-        singSong.play();
+        setTimeout(function(){singSong.play()}, 1000);
     }
     if(userInput.indexOf("stop") > -1){
-        singSong.pause();
+        setTimeout(function(){singSong.pause()}, 1000);
         singSong.currentTime = 0;
     };
     

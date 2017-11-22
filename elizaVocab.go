@@ -7,6 +7,18 @@ var phrases = map[string][]string{
         "Hey how are you friend?",
         "Dia ghuit aon sceal agut?",
     },
+    `stop`: {
+        "I'll stop for you comrade.",
+        "I'll stop for now friend.",
+        "Ok, I'll stop now.",
+        "I'll quit like I quit the IR... camera purchase on Amazon. Not in the ra.",
+    },
+    `sing`: {
+        "Just tell me to stop if you've had enough.",
+        "Tell me to stop if yous has had enough. Come out ye black and tans.....",
+        "Here I go! Don't be afraid to ask me to stop.",
+        "I'll start now, just for you. Tell me stop stop when you heard enough.",
+    },
     `up the ira`: {
         "Ho ha up the ra!",
     },
@@ -196,18 +208,6 @@ var phrases = map[string][]string{
     `why (.*)`: {
         "You're asking why %s. When the real question is when will the Scotland leave the UK and ultimately destroy the UK and it's fleg.",
         "You ask why %s? When you should be asking yourself why you ask these question.",
-    },
-    `stop`: {
-        "I'll stop for you comrade.",
-        "I'll stop for now friend.",
-        "Ok, I'll stop now.",
-        "I'll quit like I quit the IR... camera purchase. Not in the ra.",
-    },
-    `sing`: {
-        "Bitta Gareth Brooks!",
-        "Come out ye black and tans.....",
-        "Here I go!",
-        "I'll start now, just for you.",
     },
     `yes`: {
         "Conviction, I like it. We need more like you in the IR.... Sinn Féin youth, sign up today!",
