@@ -2,6 +2,8 @@
 const inputText = $("#userInput");
 const ouputText = $("#botOutput");
 
+var singSong = new Audio('assets/sound/gerrySong.mp3');
+
 // Jquery keypress for user input
 inputText.keypress(function(e){
 
@@ -19,6 +21,17 @@ inputText.keypress(function(e){
     inputText.val("");
     const userPrompt = {"input" : userInput }
     ouputText.append("<img src=\"/assets/image/user.jpg\" class=\"profileImage\">" + "<p class=\"reply\">" + "<b class=\"userName\">User: </b>" + userInput + "</p>");
+
+    console.log(userInput.indexOf("sing"));
+
+    if(userInput.indexOf("sing") > -1){
+        singSong.play();
+    }
+    if(userInput.indexOf("stop") > -1){
+        singSong.pause();
+        singSong.currentTime = 0;
+
+    };
     
     // When go can comunicate with webpage '.done' will run otherwise '.fail' will
     $.get("/elizaPrompt", userPrompt)
@@ -27,13 +40,13 @@ inputText.keypress(function(e){
             const output = "<img src=\"/assets/image/profile.png\" class=\"profileImage\">" + "<p class=\"reply\">" + "<b class=\"userName\">Gerry Adams: </b>" + response + "</p>";
 
             // The bots response with HTML elements are output to the webpage with an alert
-            setTimeout(function(){ouputText.append(output), new Audio('assets/sound/responseAlert.mp3').play();}, 1000);
+            setTimeout(function(){ouputText.append(output), new Audio('assets/sound/responseAlert.mp3').play(),document.getElementById('userInput').scrollIntoView();}, 1000);
             
         }).fail(() => {
             // If the webpage cannot retrieve the GO eliza files the user will be informed
             const output = "<img src=\"/assets/image/profile.png\" class=\"profileImage\">" + "<p class=\"reply\">" + "<b class=\"userName\">Gerry Adams: </b>" + "I am away directing Sinn Féin towards a united Ireland." + "</p>";
 
             // An alert is ouput with HTML elements informing the user
-            setTimeout(function(){ouputText.append(output), new Audio('/assets/sound/responseAlert.mp3').play();}, 1000);
+            setTimeout(function(){ouputText.append(output), new Audio('/assets/sound/responseAlert.mp3').play(),document.getElementById('userInput').scrollIntoView();}, 1000);
         });
 });

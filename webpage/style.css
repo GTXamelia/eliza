@@ -15,7 +15,6 @@ body {
 
 .box {
 	margin: auto;
-	width: 50%;
 	min-height: 100px;
 	box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.8), -12px 0 8px -4px rgba(0, 0, 0, 0.8);
 	background: #252934; /* For browsers that do not support gradients */
@@ -31,9 +30,10 @@ body {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
-    float: right;
-    width: 40%;
-    margin-top:5px;
+	width: 100%;
+    padding: 10px;
+    margin-bottom:10px; /*change margin to margin-bottom*/
+    box-sizing : border-box;
 }
 
 .reply {
@@ -43,6 +43,12 @@ body {
 .userName {
     color: #4d94b1!important;
 }
+
+.overDiv {
+    margin: auto;
+    width: 50%;
+}
+
 
 .profileImage {
     height: 25px;

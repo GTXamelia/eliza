@@ -214,6 +214,18 @@ var phrases = map[string][]string{
         "What is it you're really asking friend?",
         "I find google could answer this question give it a go on 'www.google.ie'. not on .co.uk.",
     },
+    `stop`: {
+        "I'll stop for you comrade.",
+        "I'll stop for now friend.",
+        "Ok, I'll stop now.",
+        "I'll quit like I quit the IR... camera purchase. Not in the ra.",
+    },
+    `sing`: {
+        "Bitta Gareth Brooks!",
+        "Come out ye black and tans.....",
+        "Here I go!",
+        "I'll start now, just for you.",
+    },
     `(.*)\?`: {
         "Thats an odd question?",
         "Could you rephrase that questions friend",
@@ -230,6 +242,7 @@ var conversationFail = []string{
     "Tell me more.",
     "Do you have time to talk about Wolfe Tone?",
     "Follow me on twitter @GerryAdamsSF",
+    "Add me on SnapChat 'gerryadamsirl'. I post the spiciest memes around",
     "Have you voted Sinn Fein?",
     "Buy my books on Amazon not on Amazon.co.BritishTyranny though",
     "I make the spiciest memes around",
@@ -266,13 +279,12 @@ var Synonymizer = map[string][]string{
     "thank you":[]string{"thanks","bless","praise"},
     "yes":      []string{"aye", "indeed", "quite","afirmitive","ya"},
     "no":       []string{"nay", "na", "negative"},
-    "alcohol":  []string{"beer","spirits","vodka","guinness"},
-    "joke":     []string{"laugh","humor","parody"},
-    "Paisley":  []string{"foster","dup"},
     
     // Words
     "ira":      []string{"ra"},
     "uk":       []string{"england","kingdom","union"},
     "gerry":    []string{"adams","madman"},
     "monarchy": []string{"royals","royal","queen","king","princess","prince","dutchess","duke","monarch"},
+    "sing":     []string{"song", "singsong", "hum"},
+    "stop":     []string{"stahp","staid","cease"},
 }
