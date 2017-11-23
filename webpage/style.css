@@ -7,12 +7,14 @@ body {
     background-size: cover;
   }
 
+/* Header settings */
 .header {
     color: white;
     margin: auto;
     width: 50%;
 }
 
+/* 'box' where input/output is displayed and input is accepted */
 .box {
 	margin: auto;
 	min-height: 100px;
@@ -26,6 +28,7 @@ body {
 
 }
 
+/* Settings for input form */
 .inputBox {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -36,20 +39,23 @@ body {
     box-sizing : border-box;
 }
 
+/* Text settings */
 .reply {
     color: white;
 }
 
+/* Username settings */
 .userName {
     color: #4d94b1!important;
 }
 
+/* Div surrounding input/output div settings */
 .overDiv {
     margin: auto;
     width: 50%;
 }
 
-
+/* Profile picture to the left of user name settings */
 .profileImage {
     height: 25px;
     width: 25px;
