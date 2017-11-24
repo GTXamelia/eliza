@@ -22,7 +22,12 @@ This Eliza bot was created in the 'GO' programming language. This Eliza bot has 
 - webpage
   - assets
     - image
+      - background.jpg
+      - profile.png
+      - user.jpg
     - sound
+      - gerrySong.mp3
+      - responseAlert.mp3
   - index.html
   - script.js
   - style.css
