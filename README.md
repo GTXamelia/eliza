@@ -8,25 +8,25 @@ This Eliza bot was created in the 'GO' programming language. This Eliza bot has 
 
 
 ### Instructions
->- Clone repository.
->- Open CMD or Terminal
->- CD into cloned repository
->- CD into 'main' folder inside cloned repository
->- Using CMD run 'go run elizaMain.go' or 'go build elizaMain.go'
-  >- Run the excutable 'elizaMain.exe'
+- Clone repository.
+- Open CMD or Terminal
+- CD into cloned repository
+- CD into 'main' folder inside cloned repository
+- Using CMD run 'go run elizaMain.go' or 'go build elizaMain.go'
+  - Run the excutable 'elizaMain.exe'
 >- Go to address '127.0.0.1:8080' or 'localhost:8080'
 
 ### Operation (Step-by-Step)
->  1. User connects to '127.0.0.1:8080' or 'localhost:8080'
->  2. elizaMain.go takes http request and directs user
->  3. User is shown a HTML webpage which graps settings from styles.css and jquery/javascript from scripts.js
->  4. elizaMain.go grabs user input from scripts.js when user clicks enter
->  5. elizaMain.go passes input to elizaBrain.go which processes the input trading information with elizaVocab.go
->  6. Once input has finished, elizaBrain.go returnes formated input
->  7. When elizaMain.go has received the formated input it is received as output
->  8. Ouput is then passed to scripts.js and is ouput to the HTML page by appending to the page
->  9. The user is then prompted by a sound, picture, bots name and the response.
-> 10. The user can then respond to the bot to continue the conversation
+  1. User connects to '127.0.0.1:8080' or 'localhost:8080'
+  2. elizaMain.go takes http request and directs user
+  3. User is shown a HTML webpage which graps settings from styles.css and jquery/javascript from scripts.js
+  4. elizaMain.go grabs user input from scripts.js when user clicks enter
+  5. elizaMain.go passes input to elizaBrain.go which processes the input trading information with elizaVocab.go
+  6. Once input has finished, elizaBrain.go returnes formated input
+  7. When elizaMain.go has received the formated input it is received as output
+  8. Ouput is then passed to scripts.js and is ouput to the HTML page by appending to the page
+  9. The user is then prompted by a sound, picture, bots name and the response.
+ 10. The user can then respond to the bot to continue the conversation
 
 ### File Structure
 - main 
