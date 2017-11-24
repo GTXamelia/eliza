@@ -17,7 +17,7 @@ This Eliza bot was created in the 'GO' programming language. This Eliza bot has 
 - Go to address '127.0.0.1:8080' or 'localhost:8080'
 
 ### Operation (Step-by-Step)
-> - User connects to '127.0.0.1:8080' or 'localhost:8080'
+> 1- User connects to '127.0.0.1:8080' or 'localhost:8080'
 >- elizaMain.go takes http request and directs user
 >- User is shown a HTML webpage which graps settings from styles.css and jquery/javascript from scripts.js
 >- elizaMain.go grabs user input from scripts.js when user clicks enter
