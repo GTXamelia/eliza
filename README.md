@@ -19,7 +19,13 @@ This Eliza bot was created in the 'GO' programming language. This Eliza bot has 
 ### File Structure
 - main 
   - elizaMain.go
--webpage
+- webpage
+  - assets
+    - image
+    - sound
+  - index.html
+  - script.js
+  - style.css
 - LICENCE
 - README.md
 - elizaBrain.go
