@@ -14,8 +14,14 @@ This Eliza bot was created in the 'GO' programming language. This Eliza bot has 
 - CD into 'main' folder inside cloned repository
 - Using CMD run 'go run elizaMain.go' or 'go build elizaMain.go'
   - Run the excutable 'elizaMain.exe'
-- Go to address '127.0.0.1:8080'
-
+- Go to address '127.0.0.1:8080' or 'localhost:8080'
 
 #### File Structure
--
+- main 
+  - elizaMain.go
+-webpage
+- LICENCE
+- README.md
+- elizaBrain.go
+- elizaVocab.go
+
